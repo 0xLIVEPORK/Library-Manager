@@ -21,6 +21,7 @@ void set_bookdata(book_DATA & book)
 
             while(true)
                 {
+                std::cout << "Enter Here: ";
                     if(!(std::getline(std::cin, prompt)) || prompt.empty()) {
                         std::cin.clear();
                         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
@@ -30,9 +31,9 @@ void set_bookdata(book_DATA & book)
             return prompt;
         };
 
-        
+
         while(true)
             {
-           
+                data_validation(book.Author);
             }
     }
