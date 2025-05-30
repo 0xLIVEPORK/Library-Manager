@@ -15,6 +15,9 @@ struct book_DATA
 
 
 int main(){
+    book_DATA test;
+
+    set_bookdata(test);
 
 }
 
