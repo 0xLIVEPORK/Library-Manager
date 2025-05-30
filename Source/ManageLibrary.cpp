@@ -28,6 +28,7 @@ void set_bookdata(book_DATA & book) {
         std::string line;
         while(true)
             {
+            std::cout << prompt;
                 if(!(std::getline(std::cin, line)) || line.empty())
                     {
                         std::cin.clear();
@@ -38,4 +39,17 @@ void set_bookdata(book_DATA & book) {
             }
         return line;
     };
+
+    //SET DATA SECTION
+
+    do
+    {
+        book.Title = enter_data("Book Title: ");
+        book.Author = enter_data("Author: ");
+        book.ISB = enter_data("ISB: ");
+        book.Genre = enter_data("Genre: ");
+        book.Availability = enter_data("Availability: ");
+        break;
+    } while (true);
+    
 }
