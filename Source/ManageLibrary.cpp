@@ -13,6 +13,11 @@ struct book_DATA
     
 };
 
+
+int main(){
+
+}
+
 void set_bookdata(book_DATA & book)
     {
         
