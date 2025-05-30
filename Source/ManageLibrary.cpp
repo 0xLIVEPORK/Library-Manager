@@ -30,9 +30,12 @@ void set_bookdata(book_DATA & book) {
             {
                 if(!(std::getline(std::cin, line)) || line.empty())
                     {
-
+                        std::cin.clear();
+                        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                        continue;
                     }
-            break;
+                break;
             }
+        return line;
     };
 }
