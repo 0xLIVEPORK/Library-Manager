@@ -22,29 +22,17 @@ int main(){
 
 }
 
-void set_bookdata(book_DATA & book)
-    {
-        
-        auto data_validation = [](const std::string & info){
-            std::string prompt;
+void set_bookdata(book_DATA & book) {
 
-            while(true)
-                {
-                std::cout << info;
-                    if((!(std::getline(std::cin, prompt))) || prompt.empty() == 1) {
-                        std::cin.clear();
-                        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-                        continue;
-                    } 
-                    break;
-                }
-            return prompt;
-        };
-
-
+    auto enter_data = [](const std::string prompt){
+        std::string line;
         while(true)
             {
-                book.Author = data_validation("Enter Author Name: ");
-                break;
+                if(!(std::getline(std::cin, line)) || line.empty())
+                    {
+
+                    }
+            break;
             }
-    }
+    };
+}
