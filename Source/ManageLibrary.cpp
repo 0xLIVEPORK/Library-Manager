@@ -2,7 +2,6 @@
 #include <cstdlib>
 #include <limits>
 
-void set_bookdata();
 struct book_DATA
 {
     std::string Title, 
@@ -12,6 +11,8 @@ struct book_DATA
                 Availability;
     
 };
+
+void set_bookdata(book_DATA & book);
 
 
 int main(){
@@ -29,12 +30,13 @@ void set_bookdata(book_DATA & book)
 
             while(true)
                 {
-                std::cout << "Enter Here: ";
-                    if(!(std::getline(std::cin, prompt)) || prompt.empty()) {
+                std::cout << info;
+                    if((!(std::getline(std::cin, prompt))) || prompt.empty() == 1) {
                         std::cin.clear();
                         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
                         continue;
-                    } break;
+                    } 
+                    break;
                 }
             return prompt;
         };
@@ -42,6 +44,7 @@ void set_bookdata(book_DATA & book)
 
         while(true)
             {
-                data_validation(book.Author);
+                book.Author = data_validation("Enter Author Name: ");
+                break;
             }
     }
