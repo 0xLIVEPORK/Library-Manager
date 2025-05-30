@@ -20,9 +20,13 @@ void set_bookdata(book_DATA & book)
             std::string prompt;
             while(true)
                 {
-                    if(std::getline(std::cin, prompt)) {
-                        
-                    }
+                    if(!(std::getline(std::cin, prompt)) || prompt.empty()) {
+                        std::cin.clear();
+                        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                        continue;
+                    } break;
+                    
+                    return prompt;
                 }
         };
         while(true)
