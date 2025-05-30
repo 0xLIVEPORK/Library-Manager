@@ -4,27 +4,29 @@
 
 void set_bookdata();
 struct book_DATA
-s{
+{
     std::string Title, 
                 Author, 
                 ISB, 
-                Genre;
-    
-    bool availability;
+                Genre,
+                Availability;
     
 };
 
 void set_bookdata(book_DATA & book)
     {
-        std::string dataentry;
-        std::string line;
-
-        while(true)
-            {
-                if(!(std::getline(std::cin, book.Author))
-                    {
+        
+        auto data_validation = [](const std::string & info){
+            std::string prompt;
+            while(true)
+                {
+                    if(std::getline(std::cin, prompt)) {
                         
                     }
+                }
+        };
+        while(true)
+            {
+           
             }
     }
-s
