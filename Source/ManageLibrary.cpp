@@ -4,7 +4,7 @@
 
 void set_bookdata();
 struct book_DATA
-{
+s{
     std::string Title, 
                 Author, 
                 ISB, 
@@ -27,3 +27,4 @@ void set_bookdata(book_DATA & book)
                     }
             }
     }
+s
