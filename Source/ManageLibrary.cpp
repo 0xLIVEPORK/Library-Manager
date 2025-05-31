@@ -15,17 +15,14 @@ struct book_DATA
 
 void set_bookdata(book_DATA & book);
 
+void writetofile_bkdata(book_DATA & book);
+
 
 int main(){
     book_DATA test;
 
     set_bookdata(test);
 
-    
-    for(int i = 0; i < 5; i++)
-        {
-            
-        }
 
 }
 
