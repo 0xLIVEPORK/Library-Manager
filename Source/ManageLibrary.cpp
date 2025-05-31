@@ -48,10 +48,10 @@ void set_bookdata(book_DATA & book) {
     //DATA VALIDATION LAMBDA
 
     //WRITE TO BOOK FILE LAMBDA
-    std::ofstream bookfile("book_list.txt", std::ios::app);
+    std::ifstream bookfile("book_list.txt", std::ios::app);
     if(!bookfile)
         {
-            
+            std::cerr << "File Making Filled";
         }
     //WRITE TO BOOK FILE LAMBDA
 
