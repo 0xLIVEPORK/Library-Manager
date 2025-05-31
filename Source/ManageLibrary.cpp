@@ -54,4 +54,7 @@ void set_bookdata(book_DATA & book) {
 
     book.ISB = enter_data("Enter ISB: ");
     std::cout << "ISB Set to " << book.ISB << "\n\n";
+
+    book.Availability = enter_data("Enter Availability: ");
+    std::cout << "Availability Set to: " << book.Availability << "\n\n";
 }
