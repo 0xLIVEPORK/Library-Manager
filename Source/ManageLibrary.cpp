@@ -28,6 +28,8 @@ int main(){
 
 void set_bookdata(book_DATA & book) {
 
+
+    //DATA VALIDATION LAMBDA
     auto enter_data = [](const std::string & prompt) -> std::string {
     std::string line;
         while(true)
@@ -43,6 +45,9 @@ void set_bookdata(book_DATA & book) {
         }
     return line;
     };
+    //DATA VALIDATION LAMBDA
+
+    //WRITE TO BOOK FILE LAMBDA
 
     //MAIN FUNCTION SECTION
     //v.01
@@ -61,4 +66,7 @@ void set_bookdata(book_DATA & book) {
 
     book.Availability = enter_data("Enter Availability: ");
     std::cout << "Availability Set to: " << book.Availability << "\n\n";
+
+
 }
+
