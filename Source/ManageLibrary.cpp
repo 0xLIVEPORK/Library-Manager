@@ -24,32 +24,34 @@ int main(){
 
 void set_bookdata(book_DATA & book) {
 
-    auto enter_data = [](const std::string prompt){
-        std::string line;
+    auto enter_data = [](const std::string & prompt) -> std::string {
+    std::string line;
         while(true)
+        {
+        std::cout << prompt;
+            if(!(std::getline(std::cin, line)) || line.empty())
             {
-            std::cout << prompt;
-                if(!(std::getline(std::cin, line)) || line.empty())
-                    {
-                        std::cin.clear();
-                        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-                        continue;
-                    }
-                break;
-            }
-        return line;
+                std::cin.clear();
+                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                continue;        
+            } 
+        break;
+        }
+    return line;
     };
 
-    //SET DATA SECTION
-
-    do
-    {
-        book.Title = enter_data("Book Title: ");
-        book.Author = enter_data("Author: ");
-        book.ISB = enter_data("ISB: ");
-        book.Genre = enter_data("Genre: ");
-        book.Availability = enter_data("Availability: ");
-        break;
-    } while (true);
+    //MAIN FUNCTION SECTION
+    //v.01
     
+    book.Title = enter_data("Enter Book Title: ");
+    std::cout << "Book Title Set to: " << book.Title << "\n\n";
+
+    book.Author = enter_data("Enter Author: ");
+    std::cout << "Author Set to: " << book.Author << "\n\n";
+
+    book.Genre = enter_data("Enter Genre: ");
+    std::cout << "Genre Set to " << book.Genre << "\n\n";
+
+    book.ISB = enter_data("Enter ISB: ");
+    std::cout << "ISB Set to " << book.ISB << "\n\n";
 }
