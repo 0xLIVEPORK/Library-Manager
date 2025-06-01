@@ -1,4 +1,4 @@
-effff#include <iostream>
+#include <iostream>
 #include <cstdlib>
 #include <limits>
 #include <fstream>
@@ -51,7 +51,7 @@ void set_bookdata(book_DATA & book) {
     std::ifstream bookfile("book_list.txt", std::ios::app);
     if(!bookfile)
         {
-            std::cerr << "File Making Filled";
+            std::cerr << "File Making Failed";
         }
     //WRITE TO BOOK FILE LAMBDA
 
