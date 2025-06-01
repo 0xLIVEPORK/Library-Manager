@@ -48,10 +48,15 @@ void set_bookdata(book_DATA & book) {
     //===========================================================================
 
     //WRITE TO BOOK FILE LAMBDA
-    std::ifstream bookfile("book_list.txt", std::ios::app);
+    std::ofstream bookfile("book_list.txt", std::ios::app);
     if(!bookfile)
         {
             std::cerr << "File Making Failed";
+        }
+
+    else
+        {
+
         }
     //=======================================================
 
