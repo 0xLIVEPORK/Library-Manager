@@ -53,7 +53,7 @@ void set_bookdata(book_DATA & book) {
         {
             std::cerr << "File Making Failed";
         }
-    //WRITE TO BOOK FILE LAMBDA
+    //=======================================================
 
     //MAIN FUNCTION SECTION
     //v.01
