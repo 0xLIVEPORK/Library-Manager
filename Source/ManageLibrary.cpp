@@ -54,7 +54,8 @@ void set_bookdata(book_DATA & book) {
             std::cerr << "File Making Failed";
         }
 
-    bookfile << book.Author();
+    bookfile << book.Author << "|"
+             << book.Availability << "|";
     //=======================================================
 
     //MAIN FUNCTION SECTION
