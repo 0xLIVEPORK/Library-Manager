@@ -15,9 +15,6 @@ struct book_DATA
 
 void set_bookdata(book_DATA & book);
 
-void writetofile_bkdata(book_DATA & book);
-
-
 int main(){
     book_DATA test;
 
@@ -47,7 +44,7 @@ void set_bookdata(book_DATA & book) {
             }
     };
 
-    //===========================================================================
+    //=======================================================
 
     //WRITE TO BOOK FILE LAMBDA
     std::fstream bookfile("book_list.txt", std::ios::app);
