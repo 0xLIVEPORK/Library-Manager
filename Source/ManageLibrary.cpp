@@ -39,8 +39,9 @@ void set_bookdata(book_DATA & book) {
                         std::cin.clear();
                         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
                     }
-
                 
+                else
+                    return answer;
             }
     }
 
