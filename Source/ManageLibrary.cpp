@@ -75,7 +75,7 @@ void set_bookdata(book_DATA & book) {
                  << book.Author       << "|"
                  << book.Genre        << "|"
                  << book.ISB          << "|"
-                 << book.Availability << "|";
+                 << book.Availability << "|\n";
                  
     //=======================================================
 
